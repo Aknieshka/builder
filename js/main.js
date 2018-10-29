@@ -6,12 +6,13 @@ const Number = ['Equals','Less than','Greater than'];
 const Radio = ['Equals'];
 const RadioValue = ['Yes','No'];
 var first = document.getElementById('main');
+const second = document.getElementById('main');
 const index="item";
 const sub="sub";
 var indexS = 0;
 var indexN = 0;
 
-function addInput() { 
+function addInput(idButton) { 
 
     var item = document.createElement("div");
     var indexItem = index+'-'+indexN.toString();
@@ -89,7 +90,7 @@ function addInput() {
 
     // next container
 
-    addSub.onclick = function(elem) {
+    addSub.onclick = function() {
         var nextDiv = document.createElement('div');
         nextDiv.className='newContainer'; 
     
@@ -156,6 +157,9 @@ function addInput() {
 
         first=nextDiv;
         addInput(); 
+        if(idButton=='start') {
+            first=second;
+        }
     };
 
     deleteSub.onclick = function() {
