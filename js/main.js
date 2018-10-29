@@ -13,11 +13,10 @@ var indexS = 0;
 var indexN = 0;
 
 function addInput(idButton) { 
-
     if(idButton=='start') {
-            first=second;
-        }
-    
+        first=second;
+    }
+
     var item = document.createElement("div");
     var indexItem = index+'-'+indexN.toString();
 
@@ -95,6 +94,8 @@ function addInput(idButton) {
     // next container
 
     addSub.onclick = function() {
+
+        
         var nextDiv = document.createElement('div');
         nextDiv.className='newContainer'; 
     
@@ -160,7 +161,9 @@ function addInput(idButton) {
         nextDiv.appendChild(topDiv);
 
         first=nextDiv;
+        
         addInput(); 
+
         
     };
 
