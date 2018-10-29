@@ -1,6 +1,6 @@
 div {
     padding: 5px 0;
-    display: inline-block;
+    display:inline-block;
     width: 100%;
 }
 
@@ -14,15 +14,22 @@ div {
     padding-top: 0;
 }
 
+#main>.item:not(:first-child) {
+    border-top: 1px solid #e5e5e5;
+}
+
+#main>.item {
+    padding-top: 20px;
+}
+
 .topDiv:first-child {
     border-top: 1px solid #e5e5e5;
     padding-top: 10px;
     padding-bottom: 0;
-    margin-bottom: -5px;
 }
 
 .item:first-child {
-    border-bottom: 1px solid #e5e5e5;
+    /* border-bottom: 1px solid #e5e5e5; */
     padding-bottom: 10px;
 }
 
