@@ -14,6 +14,10 @@ var indexN = 0;
 
 function addInput(idButton) { 
 
+    if(idButton=='start') {
+            first=second;
+        }
+    
     var item = document.createElement("div");
     var indexItem = index+'-'+indexN.toString();
 
@@ -157,9 +161,7 @@ function addInput(idButton) {
 
         first=nextDiv;
         addInput(); 
-        if(idButton=='start') {
-            first=second;
-        }
+        
     };
 
     deleteSub.onclick = function() {
